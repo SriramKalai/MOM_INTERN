@@ -1,0 +1,156 @@
+.product-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: scroll;
+  padding: 20px 0; 
+  margin-left: 08px;
+  padding-bottom: 0px;
+  width: 99.8%;
+}
+.product-section::-webkit-scrollbar{
+  display: none;
+}
+
+.nata-home-product-item_title{
+  font-family: sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 5px;
+  margin-top: 19px;
+  margin-left: 08px;
+  line-height: 1;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: nowrap;  
+}
+
+
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  /* box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); */
+  margin-right: 20px;
+  /* padding: 01px; */
+  text-align:left;
+  width: 362px;
+  
+}
+
+.product-card img {
+  max-width: 100%;
+  padding-bottom: 10px;
+  
+}
+
+/* .product-card h3 {
+  margin-top: 10px;
+  font-size: 24px;
+} */
+
+
+
+/* .product-card button {
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  padding: 10px 20px;
+} */
+.product-card button:hover {
+  background-color: #555;
+}
+
+.product-card p{
+  /* font-family: "Articulat",sans-serif; */
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 05px;
+  color: #444;
+  text-decoration: none;
+  /* margin-bottom: 5px; */
+  letter-spacing: 0!important;
+  /* padding-bottom: 10px; */
+  /* margin:0.9em 0; */
+  font-family: sans-serif;
+  /* line-height: 1.15; */
+  -webkit-text-size-adjust: 100%;
+  
+}
+
+
+.product-scroll {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* .scroll-btn { 
+  
+  top: 29%;
+  width: 32px;
+  height: 32px;
+  color: #46454579;
+  opacity: 95%;
+  cursor: pointer;
+  background: #f9f9f9;
+  border-radius: 50%;
+  font-size: 15px;
+  box-shadow: rgba(0,0,0,.14) 0 1px 1px 1px;
+  border-color: transparent!important;
+  position: absolute;
+  z-index: 9999;
+  
+}
+
+.scroll-left {
+  left: 0;
+}
+
+.scroll-right {
+  right: 0;
+} */
+
+
+
+
+.buttonimg-left{
+  position: absolute;
+  top: 33%;
+  left: 7px;
+  width: 32px;
+  background-color: white;
+  border-radius: 60%;
+  opacity: 100%;
+  box-shadow: rgba(0,0,0,.14) 0 1px 1px 1px;
+  height: 32px;
+  cursor: pointer;
+
+}
+
+.buttonimg-right{
+  position: absolute;
+  top: 33%;
+  right: 7px;
+  width:32px;
+  background-color: white;
+  border-radius: 60%;
+  box-shadow: rgba(0,0,0,.14) 0 1px 1px 1px;
+  opacity: 100%;
+  height: 32px;
+  cursor: pointer;
+}
+
+.buttonimg-right:hover{
+  opacity: 0.7;
+}
+
+.buttonimg-left:hover{
+  opacity: 0.7;
+}

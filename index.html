@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet">
+  <script src="scripts.js"></script>
+  <title>Todd Shelton</title>
+
+</head>
+<body>  
+  <h2 class="nata-home-product-item_title"> SHIRTS </h2>  
+    <div class="product-section" >  
+      <!-- <button class="scroll-btn scroll-left"  id="pre">&lt;</button>     -->
+      <div class="product-container" >
+        <img img src="img/left.jpg" alt="back" class="buttonimg-left" style="top:230px;" id="pre">
+        <div class="product-card">
+          <img src="img/product-1.jpg" alt="Product 1">
+          <p>Oxford</p>
+          <p>Jim Dandy Navy</p>
+          <p>$245</p>          
+        </div>
+        <div class="product-card">
+          <img src="img/product-2.jpg" alt="Product 2">
+          <p>Short Sleeve</p>
+          <p>Early Brid Stripe</p>
+          <p>$245</p>
+        </div>
+        <div class="product-card">
+          <img src="img/product-3.jpg" alt="Product 3">
+          <p>Short Sleeve</p>
+          <p>Early Bird Light Grey</p>
+          <p>$245</p>
+        </div>
+        <div class="product-card">
+          <img src="img/product-4.jpg" alt="Product 4">
+          <p>Short Sleeve</p>
+          <p>Early Bird Gold Blue Stripe</p>
+          <p>$245</p>
+        </div>
+        <div class="product-card">
+          <img src="img/product-5.jpg" alt="Product 5">
+          <p>Short Sleeve</p>
+          <p>Early Bird Salt Pink</p>
+          <p>$245</p>
+        </div>
+        <div class="product-card">
+          <img src="img/product-6.jpg" alt="Product 6">
+          <p>Short Sleeve</p>
+          <p>Early Bird Blue </p>
+          <p>$245</p>
+        </div>
+        <div class="product-card">
+          <img src="img/product-1.jpg" alt="Product 6">
+          <p>Short Sleeve</p>
+          <p>Early Bird Navy Blue</p>
+          <p>$245</p>
+        </div>
+        <img src="img/right.jpg" alt="next" class="buttonimg-right" style="top:230px;" id="next">
+      </div>     
+  <!-- <button class="scroll-btn scroll-right" id="next">&gt;</button> -->
+</div>
+<hr style="opacity: 0.5;">
+
+
+
+
+<script>
+const product_section = document.querySelector(".product-section");
+let isDragging = false;
+let startX, scrollLeft;
+
+product_section.addEventListener("mousedown", e => {
+isDragging = true;
+startX = e.pageX - product_section.offsetLeft;
+scrollLeft = product_section.scrollLeft;
+});
+
+product_section.addEventListener("mouseleave", () => {
+isDragging = false;
+});
+
+product_section.addEventListener("mouseup", () => {
+isDragging = false;
+});
+
+product_section.addEventListener("mousemove", e => {
+if (!isDragging) return;
+e.preventDefault();
+const x = e.pageX - product_section.offsetLeft;
+const walk = (x - startX)*5;
+product_section.scrollLeft = scrollLeft - walk;
+            });
+
+
+
+
+
+let productContainer = document.querySelector('.product-section');
+let pre = document.getElementById('pre');
+let next = document.getElementById('next');
+
+next.addEventListener("click", () => {
+  productContainer.style.scrollBehavior="smooth";
+  productContainer.scrollLeft+=385;
+});
+
+pre.addEventListener("click", () => {
+  productContainer.style.scrollBehavior="smooth";
+  productContainer.scrollLeft-=385;
+});
+
+// const slider =document.querySelector('.product-container');
+// let isDown=false;
+// let startX;
+// let left;
+
+// slider.addEventListener("mousedown",(e)=>{
+//   isDown=True;
+//   slider.classList.add('active');
+//   startX=e.pageX-slider.offsetLeft;
+//   left=slider.left;
+// });
+// slider.addEventListener("mouseleave",()=>{
+//   isDown=false;
+//   slider.classList.remove('active');
+// });
+// slider.addEventListener("mouseup",()=>{
+//   isDown=false;
+//   slider.classList.remove('active');
+// });
+// slider.addEventListener("mousemove",(e)=>{
+//   if(!isDown) return;
+//   e.preventDefault();
+//   const x=e.pageX-slider.offsetLeft;
+//   const walk=(x -startX)*3;
+//   slider.left=left-walk;
+  
+// });
+
+
+</script>
+        
+  
+  
+</body>
+</html>
+
+
+
+
+
